@@ -1,3 +1,124 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ARZ Design Home — el emeği, doğal ve zarif ev dekorasyonları, yılbaşı süsleri ve özel hediyeler.">
+<title>ARZ Design Home | El Emeği & Doğal Dekor</title>
+<style>
+:root{--cream:#f3e6d5;--paper:#fffaf2;--ink:#49362b;--green:#5d7558;--green-dark:#405a3f;--muted:#75685d;--line:#dfcdb7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#f1dfc9 0%,#f8efe3 34%,#f3e5d4 100%);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,248,237,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand img{width:62px;height:62px;object-fit:cover;border-radius:50%}.brand span{font-size:25px;letter-spacing:.16em;font-weight:800;color:#3f3027;text-shadow:0 2px 0 rgba(255,255,255,.65),0 5px 18px rgba(92,63,38,.12)}
+.navlinks{display:flex;gap:27px;font:14px Arial,sans-serif;color:#6f655d}.navlinks a{transition:.25s}.navlinks a:hover{color:var(--green-dark)}
+.menu{display:none;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:8px 13px;color:var(--ink)}
+.hero{padding:78px 0 82px;background:radial-gradient(circle at 15% 10%,rgba(255,211,137,.34),transparent 25%),radial-gradient(circle at 88% 15%,rgba(150,105,55,.20),transparent 30%),linear-gradient(135deg,#fff8ec,#ead7bf)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--green-dark);font:600 12px Arial,sans-serif}
+.hero h1{font-size:clamp(50px,7vw,86px);line-height:1.02;margin:16px 0 22px;font-weight:500;letter-spacing:-2px}.hero h1 em{color:var(--green-dark);font-style:normal}
+.hero p{font-size:18px;color:var(--muted);max-width:600px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 23px;border-radius:999px;border:1px solid var(--green-dark);font:600 13px Arial,sans-serif;transition:.3s;display:inline-block}.btn.primary{background:var(--green-dark);color:#fff}.btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(80,70,60,.12)}
+.hero-card{background:#fff;padding:12px;border:1px solid var(--line);border-radius:30px;box-shadow:0 22px 60px rgba(80,65,50,.13)}.hero-card img{display:block;width:100%;height:540px;object-fit:cover;border-radius:22px}
+section{padding:88px 0}.section-head{text-align:center;margin-bottom:42px}.section-head .eyebrow{display:block;margin-bottom:9px}.section-head h2{font-size:43px;font-weight:500;margin:0 0 9px}.section-head p{color:var(--muted);max-width:660px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:rgba(255,253,249,.94);border:1px solid var(--line);border-radius:23px;overflow:hidden;box-shadow:0 9px 30px rgba(80,65,50,.06);transition:.35s}.card:hover{transform:translateY(-7px);box-shadow:0 20px 45px rgba(80,65,50,.12)}
+.card img{width:100%;height:285px;object-fit:cover;display:block}.card-body{padding:23px}.card h3{margin:0 0 7px;font-size:23px;font-weight:500}.card p{margin:0;color:var(--muted)}
+.about{background:#fffaf4}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}.about img{width:100%;height:510px;object-fit:cover;border-radius:28px;box-shadow:0 20px 50px rgba(80,65,50,.11)}
+.about h2{font-size:46px;font-weight:500;line-height:1.08;margin:14px 0}.about p{color:var(--muted)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.check{padding:15px;border:1px solid var(--line);border-radius:15px;background:#fff}.check b{color:var(--green-dark)}
+.gallery{columns:4 210px;column-gap:17px}.gallery img{width:100%;margin:0 0 14px;border-radius:19px;display:block;break-inside:avoid;border:1px solid var(--line);box-shadow:0 8px 25px rgba(80,65,50,.07);transition:.35s}.gallery img:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(80,65,50,.12)}
+.cta{background:linear-gradient(135deg,#697864,#82917b);color:#fff;text-align:center;border-radius:32px;padding:70px 25px;box-shadow:0 20px 50px rgba(80,65,50,.13)}.cta h2{font-size:43px;font-weight:500;margin:0 0 10px}.cta p{color:#eef2eb;max-width:650px;margin:0 auto 25px}.cta .btn{border-color:#fff;color:#fff}.cta .btn.primary{background:#fff;color:var(--green-dark)}
+footer{padding:38px 0;border-top:1px solid var(--line);font:14px Arial,sans-serif;color:var(--muted);background:#f4eee6}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.social{color:var(--green-dark);font-weight:700}
+@media(max-width:800px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#fffdf9;padding:20px;flex-direction:column;text-align:center;border-bottom:1px solid var(--line)}.menu{display:block}.hero{padding:55px 0 65px}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-card img{height:390px}.cards{grid-template-columns:1fr}.section-head h2,.about h2,.cta h2{font-size:34px}.brand span{font-size:15px}.checks{grid-template-columns:1fr}section{padding:68px 0}.hero h1{font-size:48px}}
+
+/* ARZ WOW visual + mağaza alanı */
+.wow-visual{padding:18px 0 88px;background:linear-gradient(180deg,#f1e9df 0,#f7f2ea 100%)}
+.wow-frame{position:relative;overflow:hidden;border-radius:32px;border:1px solid var(--line);background:#fff;box-shadow:0 24px 70px rgba(70,55,40,.16)}
+.wow-frame img{display:block;width:100%;height:auto;max-height:780px;object-fit:cover}
+.wow-caption{padding:24px 28px;text-align:center;background:rgba(255,253,249,.96)}
+.wow-caption strong{display:block;font-size:26px;font-weight:500;margin-bottom:5px}
+.wow-caption span{color:var(--muted)}
+.shops{background:#fffaf4}
+.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.shop-card{display:flex;align-items:center;justify-content:center;min-height:82px;padding:16px;border:1px solid var(--line);border-radius:18px;background:#fffdf9;font:600 14px Arial,sans-serif;color:var(--green-dark);text-align:center;transition:.3s}
+.shop-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(80,65,50,.10);background:#fff}
+.shop-card.instagram{background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+@media(max-width:800px){.shop-grid{grid-template-columns:repeat(2,1fr)}.wow-visual{padding:10px 0 65px}.wow-frame{border-radius:22px}.wow-caption strong{font-size:22px}}
+
+
+.brand-showcase{padding:32px 0 10px;background:linear-gradient(180deg,#ead3b5 0%,#f3e5d4 100%)}
+.brand-showcase-inner{text-align:center;padding:24px 20px 18px;border-radius:28px;background:rgba(255,250,241,.68);border:1px solid rgba(181,142,96,.35);box-shadow:0 15px 45px rgba(91,61,35,.10)}
+.brand-script{font-family:Georgia,"Times New Roman",serif;font-size:clamp(52px,8vw,92px);line-height:.82;letter-spacing:.08em;color:#3d3028;font-weight:500;text-shadow:2px 3px 0 rgba(255,255,255,.75),0 10px 25px rgba(74,48,28,.13)}
+.brand-title{font:800 clamp(19px,3vw,31px) Arial,sans-serif;letter-spacing:.28em;color:#4b3b31;margin-top:8px}
+.brand-sub{font:700 10px Arial,sans-serif;letter-spacing:.24em;color:#7b654e;margin-top:9px}
+@media(max-width:800px){
+  .brand span{font-size:17px;letter-spacing:.11em}
+  .brand img{width:52px;height:52px}
+  .brand-title{letter-spacing:.16em}
+  .brand-sub{letter-spacing:.14em}
+  .gallery{columns:2 150px}
+}
+
+.email-contact{margin-top:28px;display:flex;justify-content:center}
+.email-card{display:flex;align-items:center;gap:12px;padding:14px 20px;border:1px solid rgba(255,255,255,.35);border-radius:18px;background:rgba(255,255,255,.10);color:#fff;backdrop-filter:blur(8px);font:600 14px Arial,sans-serif;transition:.3s}
+.email-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.16)}
+.email-card .mail-icon{font-size:20px}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#anasayfa"><img src="logo.jfif" alt="ARZ Design Home logosu"><span>ARZ DESIGN HOME</span></a>
+<nav class="navlinks"><a href="#urunler">Ürünler</a><a href="#hikaye">Hikâyemiz</a><a href="#galeri">Galeri</a><a href="#magazalar">Mağazalar</a><a href="#iletisim">İletişim</a></nav>
+<button class="menu" onclick="const n=document.querySelector('.navlinks');n.style.display=n.style.display==='flex'?'none':'flex'">Menü</button>
+</div></header>
+<main id="anasayfa">
+<section class="brand-showcase">
+<div class="container">
+<div class="brand-showcase-inner">
+<div class="brand-script">ARZ</div>
+<div class="brand-title">DESIGN HOME</div>
+<div class="brand-sub">EL EMEĞİ · DOĞALLIK · ZARİF DETAYLAR</div>
+</div>
+</div>
+</section>
+
+<section class="hero"><div class="container hero-grid"><div>
+<div class="eyebrow">El emeği • Doğallık • Şıklık</div>
+<h1>Evinize <em>doğallık</em><br>katan detaylar.</h1>
+<p>ARZ Design Home; el emeğiyle hazırlanan dekoratif ürünleri, yılbaşı süslerini ve anlamlı hediye seçeneklerini sade ve sıcak bir tasarımla buluşturur.</p>
+<div class="buttons"><a class="btn primary" href="#urunler">Koleksiyonu keşfet</a><a class="btn" href="https://www.instagram.com/arz_design_home/" target="_blank" rel="noopener">Instagram'da incele</a></div>
+</div><div class="hero-card"><img src="yilbasi-koleksiyonu.jpg" alt="El emeği yılbaşı süsleri"></div></div></section>
+<section id="urunler"><div class="container"><div class="section-head"><span class="eyebrow">Koleksiyon</span><h2>El emeği ürünler</h2><p>Her parça özenle hazırlanır; evinize, ağacınıza veya sevdiklerinize sıcak bir dokunuş katmak için tasarlanır.</p></div>
+<div class="cards">
+<article class="card"><img src="yilbasi-detaylari.jpg" alt="Yılbaşı süsleri"><div class="card-body"><h3>Yılbaşı Süsleri</h3><p>Kar tanesi, şeker kamışı ve farklı renk seçenekleriyle el yapımı ağaç süsleri.</p></div></article>
+<article class="card"><img src="yilbasi-coraplari.png" alt="El yapımı yılbaşı çorapları"><div class="card-body"><h3>Yılbaşı Çorapları</h3><p>Kırmızı, yeşil ve krem tonlarında; hediye paketlerine ve ağaca yakışan özel tasarımlar.</p></div></article>
+<article class="card"><img src="arac-kokusu.jpg" alt="Makrome araba süsü"><div class="card-body"><h3>Makrome & Araba Süsleri</h3><p>Doğal ip, ahşap detay ve nazar boncuğuyla hazırlanan dekoratif araba aksesuarları.</p></div></article>
+</div></div></section>
+<section class="wow-visual" aria-label="ARZ Design Home özel koleksiyon sunumu">
+<div class="container">
+<div class="wow-frame">
+<img src="arz-yilbasi-koleksiyonu-wow.png" alt="ARZ Design Home yılbaşı koleksiyonu ve el emeği ürün sunumu">
+<div class="wow-caption">
+<strong>Yılbaşı koleksiyonumuzdan ilham alın</strong>
+<span>El emeği • doğal detaylar • zamansız hediyeler</span>
+</div>
+</div>
+</div>
+</section>
+<section class="about" id="hikaye"><div class="container about-grid"><img src="hediye-coraplar.jpg" alt="ARZ Design Home el yapımı ürünleri"><div>
+<span class="eyebrow">ARZ Design Home</span><h2>Küçük detaylar,<br>büyük mutluluklar.</h2><p>El emeğinin sıcaklığını doğal malzemelerle birleştiriyoruz. Her ürünün kendine özgü bir karakteri olmasına ve hediye edildiğinde güzel bir anı bırakmasına önem veriyoruz.</p>
+<div class="checks"><div class="check">♡ <b>El emeği üretim</b></div><div class="check">✦ <b>Doğal malzemeler</b></div><div class="check">🌿 <b>Özgün tasarımlar</b></div><div class="check">🎁 <b>Hediye için uygun</b></div></div>
+</div></div></section>
+<section id="galeri"><div class="container"><div class="section-head"><span class="eyebrow">İlham</span><h2>Tüm güzelliklerimiz bir arada</h2><p>Farklı renk, doku ve kullanım alanlarından seçtiğimiz bazı çalışmalar.</p></div>
+<div class="gallery"><img src="candy-cane.jpg" alt="Kırmızı yeşil şeker kamışı süsü"><img src="gül.jpg" alt="El yapımı kırmızı çiçek"><img src="yilbasi-askisi.jpg" alt="Yılbaşı ağacı süsü"><img src="makrome-motif.jpg" alt="Mavi makrome dekor"><img src="makrome-mirror.jpg" alt="El yapımı makrome ayna"></div>
+</div></section>
+<section class="shops" id="magazalar">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Satın Al</span>
+<h2>Bizi dilediğiniz yerde bulun</h2>
+<p>ARZ Design Home ürünlerini size en uygun mağazamızdan keşfedebilir, güncel koleksiyonlara ulaşabilirsiniz.</p>
+</div>
 <div class="shop-grid">
 <a class="shop-card" href="https://ciceksepeti.com/tum-urunler?storeid=1500081671" target="_blank" rel="noopener">🌸 ÇiçekSepeti</a>
 <a class="shop-card instagram" href="https://www.instagram.com/arz_design_home?utm_source=qr&stkn=YmhqZ2NtN3dmaWFx" target="_blank" rel="noopener">◎ Instagram</a>
